@@ -4,7 +4,6 @@ html {
   --font-color: #424242;
   --bg-color: #fff;
   --heading-color: #292922;
-  --switch-image: url("/images/sun.svg");
   --switch-bg: #8b8b8b;
   --br: 30px;
   --button-area-padding: 2em;
@@ -14,6 +13,8 @@ html {
   --function-color: #26eac7;
   --action-color: #eb6666;
   --number-button-color: #1b1b1b;
+  --sun-display: block;
+  --moon-display: none;
 }
 
 html[data-theme="dark"] {
@@ -27,7 +28,8 @@ html[data-theme="dark"] {
   --button-area-bg: #292d36;
   --switch-bg: #363636;
   --heading-color: #818cab;
-  --switch-image: url("/images/moon.svg");
+  --sun-display: none;
+  --moon-display: block;
 }
 
 *,
@@ -53,6 +55,15 @@ body {
   align-items: center;
 }
 
+.sun {
+  display: var(--sun-display);
+  fill: rgb(196, 163, 20);
+}
+.moon {
+  display: var(--moon-display);
+  fill: rgb(129, 129, 129);
+}
+
 .container {
   border-radius: var(--br);
   background-color: var(--main-bg);
@@ -71,10 +82,23 @@ body {
   margin-bottom: 1rem;
 }
 .dark-mode-switch {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 2.5rem;
   position: relative;
+  cursor: pointer;
   width: 2.5rem;
+  background-color: var(--switch-bg);
+  border-radius: 50%;
+}
+.dark-mode-switch > svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 80%;
 }
 
 .dark-mode-switch input {
@@ -88,8 +112,6 @@ body {
   cursor: pointer;
   transition: 0.4s;
   width: 2.5rem;
-  background-color: var(--switch-bg);
-  background-image: var(--switch-image);
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: center center;
