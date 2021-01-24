@@ -85,15 +85,10 @@
           return;
         }
         if (currentOperation) {
-          console.log("doing", currentOperation, {
-            previousValue,
-            calculatorCurrentValue,
-          });
           calculatorCurrentValue = currentOperation(
             parseFloat(previousValue),
             parseFloat(calculatorCurrentValue)
           );
-          console.log("current value!", calculatorCurrentValue);
           updateDisplay();
           currentOperation = operations[el.id];
         } else {
@@ -105,15 +100,10 @@
         shouldReset = true;
       } else {
         removeActive();
-        console.log("doing", currentOperation, {
-          previousValue,
-          calculatorCurrentValue,
-        });
         calculatorCurrentValue = currentOperation(
           parseFloat(previousValue),
           parseFloat(calculatorCurrentValue)
         );
-        console.log("current value!", calculatorCurrentValue);
         currentOperation = null;
 
         updateDisplay();
