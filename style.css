@@ -1,4 +1,4 @@
-:root {
+html {
   --primary-color: #ececec;
   --secondary-color: #536390;
   --font-color: #424242;
@@ -16,7 +16,7 @@
   --number-button-color: #1b1b1b;
 }
 
-[data-theme="dark"] {
+html[data-theme="dark"] {
   --primary-color: #272727;
   --secondary-color: #818cab;
   --font-color: #e1e1ff;
