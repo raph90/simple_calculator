@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="dark-mode-toggle">
+      <label for="checkbox" class="dark-mode-switch">
+        <input type="checkbox" name="dark-mode-switch" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+    </div>
+    <div class="container">
+      <div class="display">
+        <span id="output">3.14</span>
+      </div>
+      <div class="buttons-area">
+        <div class="button fn" id="ac">AC</div>
+        <div class="button fn" id="plus-minus">
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 512 512"
+            style="enable-background: new 0 0 512 512"
+            xml:space="preserve"
+          >
+            <g>
+              <g>
+                <path
+                  d="M362.273,149.727c-6.522-6.522-17.095-6.522-23.616,0l-188.93,188.93c-6.522,6.522-6.522,17.094,0,23.616
+			c6.522,6.522,17.094,6.522,23.616,0l188.931-188.931C368.795,166.821,368.795,156.247,362.273,149.727z"
+                />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M244.867,150.238h-38.965v-38.965c0-9.222-7.477-16.699-16.699-16.699s-16.699,7.477-16.699,16.699v38.965h-38.965
+			c-9.222,0-16.699,7.477-16.699,16.699c0,9.222,7.477,16.699,16.699,16.699h38.965v38.965c0,9.222,7.477,16.699,16.699,16.699
+			s16.699-7.477,16.699-16.699v-38.965h38.965c9.222,0,16.699-7.477,16.699-16.699C261.566,157.715,254.09,150.238,244.867,150.238z
+			"
+                />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M389.594,328.364H278.266c-9.222,0-16.699,7.477-16.699,16.699s7.477,16.699,16.699,16.699h111.329
+			c9.222,0,16.699-7.477,16.699-16.699S398.817,328.364,389.594,328.364z"
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="button fn" id="percentage">
+          <svg
+            width="512"
+            height="512"
+            viewBox="0 0 512 512"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M362.358 149.812C355.836 143.29 345.263 143.29 338.742 149.812L149.812 338.742C143.29 345.264 143.29 355.836 149.812 362.358C156.334 368.88 166.906 368.88 173.428 362.358L362.359 173.427C368.88 166.906 368.88 156.332 362.358 149.812Z"
+            />
+            <circle
+              cx="329.578"
+              cy="329.578"
+              r="43"
+              fill="transparent"
+              stroke-width="27px"
+            />
+            <circle
+              cx="182.5"
+              cy="182.5"
+              r="43"
+              fill="transparent"
+              stroke-width="27px"
+            />
+          </svg>
+        </div>
+        <div class="button action" id="divide">
+          <svg
+            width="512"
+            height="520"
+            viewBox="0 0 512 520"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M406.332 260.105C406.332 250.738 398.856 243.145 389.633 243.145H122.445C113.222 243.145 105.746 250.738 105.746 260.105C105.746 269.473 113.222 277.065 122.445 277.065L389.634 277.065C398.856 277.065 406.333 269.472 406.332 260.105Z"
+            />
+            <circle
+              r="43.4667"
+              transform="matrix(0.701604 0.712567 -0.701604 0.712567 256.039 365.665)"
+              stroke-width="33"
+              fill="transparent"
+            />
+            <circle
+              r="43.4666"
+              transform="matrix(0.701604 0.712567 -0.701604 0.712567 256.039 154.415)"
+              stroke-width="33"
+              fill="transparent"
+            />
+          </svg>
+        </div>
+        <div class="button" id="7">7</div>
+        <div class="button" id="8">8</div>
+        <div class="button" id="9">9</div>
+        <div class="button action" id="multiply">
+          <svg
+            width="512"
+            height="520"
+            viewBox="0 0 512 520"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M148.945 154.659C142.373 161.334 142.373 171.99 148.945 178.461L339.334 365.92C345.907 372.392 356.56 372.227 363.133 365.551C369.705 358.876 369.705 348.221 363.133 341.75L172.743 154.289C166.171 147.819 155.516 147.984 148.945 154.659Z"
+            />
+            <path
+              d="M360.652 152.198C353.926 145.677 343.27 145.76 336.851 152.382L150.873 344.218C144.453 350.841 144.7 361.493 151.426 368.013C158.152 374.534 168.807 374.451 175.227 367.829L361.206 175.991C367.625 169.37 367.377 158.716 360.652 152.198Z"
+            />
+          </svg>
+        </div>
+        <div class="button" id="4">4</div>
+        <div class="button" id="5">5</div>
+        <div class="button" id="6">6</div>
+        <div class="button action" id="subtract">
+          <svg
+            width="512"
+            height="520"
+            viewBox="0 0 512 520"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M406.332 260.105C406.332 250.738 398.856 243.145 389.633 243.145H122.445C113.222 243.145 105.746 250.738 105.746 260.105C105.746 269.473 113.222 277.065 122.445 277.065L389.634 277.065C398.856 277.065 406.333 269.472 406.332 260.105Z"
+            />
+          </svg>
+        </div>
+        <div class="button" id="1">1</div>
+        <div class="button" id="2">2</div>
+        <div class="button" id="3">3</div>
+        <div class="button action" id="add">
+          <svg
+            width="512"
+            height="520"
+            viewBox="0 0 512 520"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M406.332 260.105C406.332 250.738 398.856 243.145 389.633 243.145H122.445C113.222 243.145 105.746 250.738 105.746 260.105C105.746 269.473 113.222 277.065 122.445 277.065L389.634 277.065C398.856 277.065 406.333 269.472 406.332 260.105Z"
+            />
+            <path
+              d="M257.204 410.394C266.572 410.321 274.106 402.786 274.034 393.564L271.963 126.384C271.892 117.161 264.242 109.745 254.874 109.817C245.507 109.89 237.973 117.424 238.044 126.647L240.115 393.828C240.187 403.05 247.838 410.468 257.204 410.394Z"
+            />
+          </svg>
+        </div>
+        <div class="button" id="undo">
+          <svg
+            width="512"
+            height="512"
+            viewBox="0 0 512 512"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M173.053 337.754L184.5 340L177 348.5L173.053 337.754ZM173.053 337.754C218.699 383.4 292.705 384.593 338.351 338.947C383.997 293.302 383.997 219.295 338.351 173.649C292.705 128.003 218.699 128.003 173.053 173.649C147.291 199.411 136.069 233.598 139.386 266.883"
+              stroke-width="33"
+            />
+          </svg>
+        </div>
+        <div class="button" id="0">0</div>
+        <div class="button" id=".">.</div>
+        <div class="button action" id="equals">
+          <svg
+            width="512"
+            height="520"
+            viewBox="0 0 512 520"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M408.049 200.667C408.049 191.299 400.573 183.706 391.35 183.707H124.163C114.939 183.707 107.464 191.299 107.464 200.667C107.464 210.034 114.939 217.627 124.163 217.627L391.352 217.627C400.574 217.627 408.051 210.033 408.049 200.667Z"
+            />
+            <path
+              d="M106.832 313.827C106.905 323.194 114.44 330.729 123.662 330.657L390.841 328.586C400.065 328.514 407.481 320.864 407.409 311.497C407.336 302.13 399.802 294.596 390.579 294.667L123.398 296.738C114.176 296.81 106.758 304.461 106.832 313.827Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
